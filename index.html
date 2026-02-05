@@ -2,72 +2,79 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Benim Bio Sayfam</title>
+  <title>Tuğra | Bio</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      background: linear-gradient(270deg, #1d2671, #c33764);
+      background-size: 400% 400%;
+      animation: arkaplan 10s ease infinite;
+      color: white;
+    }
+
+    @keyframes arkaplan {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
       padding: 30px;
-      border-radius: 15px;
-      width: 300px;
+      border-radius: 20px;
+      width: 320px;
       text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      animation: giris 1.2s ease;
+    }
+
+    @keyframes giris {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     img {
-      width: 100px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
       margin-bottom: 15px;
     }
 
     h1 {
-      margin: 10px 0;
+      margin: 10px 0 5px;
     }
 
     p {
       font-size: 14px;
       opacity: 0.9;
+      margin-bottom: 20px;
     }
 
     a {
       display: block;
-      margin-top: 10px;
-      padding: 10px;
+      margin: 12px 0;
+      padding: 12px;
       background: white;
-      color: #2a5298;
+      color: #c33764;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 12px;
       font-weight: bold;
+      transition: all 0.3s ease;
     }
 
     a:hover {
-      background: #ddd;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="card">
-    <img src="https://via.placeholder.com/100" alt="profil">
-    <h1>Tuğra</h1>
-    <p>Frontend öğreniyorum 🚀</p>
-
-   <a href="https://www.instagram.com/tugradundar52" target="_blank">
-  Instagram
-</a>
-
-    <a href="#">GitHub</a>
-    <a href="#">Discord</a>
-  </div>
-</body>
-</html>
+      transform: scale(1.05);
+      background: #ffd1e8;
